@@ -13,3 +13,20 @@
 
 ### 页面
 ![demo](./image/readeMe.png)
+
+****
+
+Call pc camera display and can take pictures
+
+### Instructions
+-Just open the index.html page
+
+### compatible browser
+- Google
+-Firefox
+-edge
+
+### Not compatible with IE
+
+### Page
+![demo](./image/readeMe.png)
