@@ -12,7 +12,7 @@
 ### 不兼容IE
 
 ### 页面
-![demo](./image/readeMe.png)
+![demo](./image/readMe.jpg)
 
 ****
 
@@ -29,4 +29,4 @@ Call pc camera display and can take pictures
 ### Not compatible with IE
 
 ### Page
-![demo](./image/readeMe.png)
+![demo](./image/readMe.jpg)
