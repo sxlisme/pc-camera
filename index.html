@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <title>js调用摄像头拍照上传图片</title>
+    <meta charset="utf-8">
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #9E9E9E;
+        background-size: 68%;
+    }
+
+    #app {
+        text-align: center;
+    }
+
+    #tv {
+        margin: 0 auto;
+        background-image: url(./image/tv.png);
+        background-size: 112% 100%;
+        padding: 135px;
+        background-position-y: -30px;
+        background-position-x: -20px;
+        width: 300px;
+        height: 344px;
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+
+    #photo {
+        width: 400px;
+        height: 300px;
+        display: inline-block;
+    }
+
+    #photo:after {
+        content: "按空格键或者回车键拍照";
+        position: absolute;
+        color: #d6d6d6;
+        font-size: 18px;
+        text-align: center;
+        line-height: 20px;
+        vertical-align: middle;
+        width: 400px;
+        padding-top: 82px;
+        font-weight: bolder;
+    }
+
+    #video {
+        border-radius: 41px 58px 63px 46px/89px 59px 61px 48px;
+        margin-top: 51px;
+        margin-left: -78px;
+        filter: grayscale(100%);
+        transform: scaleX(-1);
+    }
+
+    canvas#canvas {
+        filter: grayscale(100%);
+        position: absolute;
+        /* background-color: black;*/
+        /*width: 300px;
+        height: 200px;*/
+        border: 6px solid white;
+        box-shadow: 1px 1px 5px #333333;
+        z-index: 2;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id='tv'>
+            <video id="video" width="400px" height="300px" autoplay="autoplay"></video>
+        </div>
+        <div id="photo">
+            <canvas id="canvas" width="400px" height="300px"></canvas>
+        </div>
+    </div>
+    <!-- <button onclick="openMedia()">开启摄像头</button>    
+    <br> <br>
+    <button onclick="takePhoto()">拍照</button>
+    <br> <br>
+    <button onclick="closeMedia()">关闭摄像头</button> -->
+    <script>
+    openMedia();
+    let mediaStreamTrack = null; // 视频对象(全局)
+    function openMedia() {
+        let constraints = {
+            video: { width: 400, height: 300 },
+            audio: false
+        };
+        //获得video摄像头
+        let video = document.getElementById('video');
+        let promise = navigator.mediaDevices.getUserMedia(constraints);
+        promise.then((mediaStream) => {
+            mediaStreamTrack = typeof mediaStream.stop === 'function' ? mediaStream : mediaStream.getTracks()[1];
+            video.srcObject = mediaStream;
+            video.play();
+        });
+    }
+
+    // 拍照
+    function takePhoto() {
+        //获得Canvas对象
+        let video = document.getElementById('video');
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, 400, 300);
+
+
+    }
+
+    // 关闭摄像头
+    function closeMedia() {
+        mediaStreamTrack.stop();
+    }
+
+    window.addEventListener('keyup', function(e) {
+        if (e.keyCode === 13 || e.keyCode === 32) {
+            takePhoto();
+        }
+
+
+    });
+    </script>
+</body>
