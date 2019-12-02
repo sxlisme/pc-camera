@@ -5,7 +5,7 @@
 - 直接打开index.html页面即可
 
 ### 兼容浏览器
-- 谷歌
+- 谷歌(http协议下仅127.0.0.1 OR localhost 可以调用)
 - 火狐
 - edge
 
@@ -22,7 +22,7 @@ Call pc camera display and can take pictures
 -Just open the index.html page
 
 ### compatible browser
-- Google
+- Google (only 127.0.0.1 or localhost can be called under http protocol)
 -Firefox
 -edge
 
