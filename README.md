@@ -1,4 +1,4 @@
-# pc-camera
+# pc-camera v1.0
 调用pc摄像头显示,并且可以拍照
 
 ### 使用方法
