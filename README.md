@@ -1,8 +1,5 @@
 # pc-camera v1.0
 调用pc摄像头显示,并且可以拍照
-=======
-# pc-camera
-调用pc摄像头显示, 并且可以拍照
 
 ### 使用方法
 - 直接打开index.html页面即可
@@ -17,8 +14,6 @@
 
 ### 页面
 ![demo](./image/readMe.jpg)
-
-****
 
 Call pc camera display and can take pictures
 
