@@ -22,8 +22,8 @@ Call pc camera display and can take pictures
 
 ### compatible browser
 - edge
-- Google (only 127.0.0.1 or localhost can be called under http protocol)
-- Firefox  (only 127.0.0.1 or localhost can be called under http protocol)
+- Google (only 127.0.0.1 or localhost can be called under http protocol) ×
+- Firefox  (only 127.0.0.1 or localhost can be called under http protocol) ×
 
 
 ### Not compatible with IE
