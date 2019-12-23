@@ -18,7 +18,7 @@
 Call pc camera display and can take pictures
 
 ### Instructions
--Just open the index.html page
+-Just open the index.html page.
 
 ### compatible browser
 - edge
